@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LFb-C3-ASv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Data Gunung Table View Controller-->
+        <scene sceneID="TKE-e4-GRz">
+            <objects>
+                <tableViewController id="LFb-C3-ASv" customClass="DataGunungTableViewController" customModule="DataGunungAppsiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WpA-Su-3dU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellBerita" rowHeight="207" id="AFW-lf-fXr" customClass="DtailTableViewCell" customModule="DataGunungAppsiOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="207"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AFW-lf-fXr" id="XCj-hu-5Q7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="206.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="gununggede.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kNa-Jp-ipS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="240" id="7mV-za-t7E"/>
+                                                <constraint firstAttribute="height" constant="128" id="Txq-iA-a4F"/>
+                                                <constraint firstAttribute="width" secondItem="kNa-Jp-ipS" secondAttribute="height" multiplier="15:8" id="alx-JV-OVb"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gunung Gede" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGI-eC-cVt">
+                                            <rect key="frame" x="0.0" y="128" width="375" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvY-sg-XWA">
+                                            <rect key="frame" x="0.0" y="149" width="375" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <string key="text">Gunung Gede adalah salah satu gunung paling...
+
+</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="kNa-Jp-ipS" firstAttribute="leading" secondItem="XCj-hu-5Q7" secondAttribute="leading" id="8Q0-TV-q2o"/>
+                                        <constraint firstItem="kNa-Jp-ipS" firstAttribute="top" secondItem="XCj-hu-5Q7" secondAttribute="top" id="I6c-ei-kty"/>
+                                        <constraint firstAttribute="trailing" secondItem="kNa-Jp-ipS" secondAttribute="trailing" constant="135" id="Rao-iq-l6H"/>
+                                        <constraint firstAttribute="bottom" secondItem="kNa-Jp-ipS" secondAttribute="bottom" constant="78.5" id="bMG-Ks-4Pp"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="Detail" destination="FvY-sg-XWA" id="U5q-Ba-Kgm"/>
+                                    <outlet property="imgGambar" destination="kNa-Jp-ipS" id="kwH-CZ-ryH"/>
+                                    <outlet property="namaGunung" destination="fGI-eC-cVt" id="OPp-Lg-ncH"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LFb-C3-ASv" id="CKL-7I-tMk"/>
+                            <outlet property="delegate" destination="LFb-C3-ASv" id="hUh-5Y-3Zr"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvc-Kj-enB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="533.60000000000002" y="106.59670164917542"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gununggede.jpg" width="700" height="473"/>
+    </resources>
+</document>
